@@ -143,7 +143,7 @@ export class Slide {
 }
 
 
-export class SlideNav extends Slide {
+export default class SlideNav extends Slide {
     constructor(slide, wrapper){
     super(slide, wrapper);
     this.bindControlEvents();
@@ -165,7 +165,6 @@ export class SlideNav extends Slide {
             control.innerHTML += `<li> <a href=#slide${index + 1}> ${index + 1}</a> </li>`;
         })
         this.wrapper.appendChild(control);
-        console.log(control);
         return control;
     }
 
